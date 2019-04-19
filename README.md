@@ -1,5 +1,6 @@
 # **Coders without Borders**
 --
+
 This is the project for Hackathon April 2019
 
 ## Strategy for the project
@@ -7,7 +8,7 @@ This is the project for Hackathon April 2019
 * This is a bee themed website.
 
 ### The need it fulfills
-* Busy people who need to create to-do lists.
+* Provides a handy todo list whilst it increases awareness of threats to bees.
 
 ### Target Audience
 * People interested in bees.
@@ -17,9 +18,10 @@ This is the project for Hackathon April 2019
 The body of the website is set up into
 * Navigation Bar
 * To-Do List
+* Poll
 * Bee links
 * Carousel
-* Poll
+
 
 * Carousel 
 

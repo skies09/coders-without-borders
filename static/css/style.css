@@ -1,0 +1,96 @@
+
+
+/* To Do List Stylings*/
+/* Style the input */
+input {
+    margin: 10px;
+    width: 25%;
+    padding-left: 10px;
+    font-size: 24px;
+}
+/* Style the "Add" button */
+
+.addBtn {
+    padding: 8px;
+    width: 25%;
+    background: #CBE432;
+    color: #2E2FE3;
+    margin: 10px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.addBtn:hover {
+    background-color: #FE6E39;
+}
+
+/* Remove margins and padding from the list */
+
+ul {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+/* Style the list items */
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #ffad33;
+    font-size: 18px;
+    transition: 0.2s;
+    width: 25%;
+}
+
+ul li.checked {
+    background: #341509;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* Style the close button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+}
+
+.close:hover {
+    background-color: #341509;
+    color: white;
+}
+
+/*PHP Stuff*/
+form {
+    padding: 5px 3%;
+}
+
+.poll {
+    font-size: 18px;
+    color: black;
+    text-shadow: 1px 2px white;
+}
+
+table {
+    padding: 5px 3%;
+    box-sizing: border-box;
+}
+
+tr {
+    font-size: 18px;
+    color: black;
+    text-shadow: 1px 2px white;
+}
+
+td {
+    padding: 5px;
+}
+
+input {
+    margin-top: 5px;
+}

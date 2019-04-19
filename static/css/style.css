@@ -167,7 +167,9 @@ input {
 
 /*----------FOOTER-----*/
 
+
 footer {
+    position:fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -186,6 +188,7 @@ footer li a {
     color: #fff;
     padding-top:10%;
 }
+
 
 /*----------FOOTER-----*/
 

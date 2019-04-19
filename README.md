@@ -10,7 +10,7 @@ This is the project for Hackathon April 2019
 * Busy people who need to create to-do lists.
 
 ### Target Audience
-* People inetrested in bees.
+* People interested in bees.
 
 # How the website is setup
 ---

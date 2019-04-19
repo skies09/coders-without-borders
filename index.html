@@ -1,55 +1,151 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
-        <script type="text/javascript" src="/static/js/poll.js"></script>
-        <title>Document</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+    <script type="text/javascript" src="/static/js/poll.js"></script>
+    <title>What's The Buzz?</title>
+</head>
 
-    <body>
-        
-        
-<!-- TO DO List -->
-    <div class='container introduction-container'>
-        <div class='row'>
-            <div class='col-xs-12'>
-                <h1 class="text-center">To-Do-List</h1>
-                 <img src='/static/img/busybee.jpeg' width='75' height='100'>
-                <h2>Busy Bee</h2>
-               
-                <input type="text" id="myInput" placeholder="To-Do">
-                <span onclick="newElement()" class="addBtn">Add</span>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid test">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><span class="text-uppercase">The Buzz?</span></a>
             </div>
-            <div class='col-xs-6'>
-                <ul id='myUL'>
-                    <li class="checked">Adopt a pet bunny</li>
-                    <li>Eat Easter Eggs</li>
-                    <li>Plant some flowers</li>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#to-dolist.html" class="li">To-do list</a></li>
+                    <li><a href="#slider">Carousel</a></li>
+                    <li><a href="ecosistem.html">Ecosystem</a></li>
+                    <li><a href="#poll.html">Poll</a></li>
                 </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- TO DO List and Poll -->
+    <div class='container introduction-container'>
+        <div id='to-dolist.html'>
+            <div class='row'>
+                <div class='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
+                    <h1 class="text-left">To-Do-List</h1>
+                    <img src='/static/img/banner-1563543_640.jpg' width='50%' height='100'>
+                    <h2>Busy Bee</h2>
+                    <input type="text" id="myInput" placeholder="To-Do">
+                    <span onclick="newElement()" class="addBtn">Add</span>
+                    <ul id='myUL'>
+                        <li>Adopt a pet bunny</li>
+                        <li>Eat Easter Eggs</li>
+                        <li>Plant some flowers</li>
+                    </ul>
+                </div>
+                <div class='row'>
+                    <div class='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
+                        <div id="poll">
+                            <h3>Do You Like Bees?</h3>
+                            <form>
+                                Yes:
+                                <input type="radio" name="vote" value="0" onclick="getVote(this.value)">
+                                <br>No:
+                                <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-<!--POLL -->
-    <div id="poll">
-        <h3>Do You Like Bees?</h3>
-        <form>
-            Yes:
-            <input type="radio" name="vote" value="0" onclick="getVote(this.value)">
-            <br>No:
-            <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
-        </form>
+
+
+    <!-- Bee Links list -->
+    <div class='container links-container'>
+
+        <div class='row'>
+            <div class='col-xs-12'>
+                <h1 class="text-center">Bee links</h1>
+                <img src='/static/img/busybee.jpeg' width='75' height='100'>
+                <h2>Take Care of Bees</h2>
+
+            </div>
+            <div class='col-xs-12'>
+                <ul id='link-ul'>
+                    <li><a href="https://www.un.org/en/events/beeday/">World Bee Day</a></li>
+                    <li><a href="https://thehoneybeeconservancy.org/how-to-save-the-bees/">Save The Bees</li>
+                        <li><a href="https://www.beyondpesticides.org/programs/bee-protective-pollinators-and-pesticides/bee-protective/">Bee Protective</li>
+                    </ul>
+                </div>
+            </div>
+        
     </div>
 
+    <!-- Carousel -->
+    <div class="slider" id="slider">
+        <a id="prevBtn" href="#" class="previous">&#8249;</a>
+                        <a id="nextBtn" href="#" class="next">&#8250;</a>
+                        <div class="holder">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script type="text/javascript" src="/static/js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    </body>
+                            <div class="sl1de"><img src="static/img/bees3.jpeg"></div>
 
-    </html>
+                            <div class="sl1de"><img src="static/img/bees1.jpeg"></div>
+
+                            <div class="sl1de"><img src="static/img/bees2.jpeg"></div>
+
+                            <div class="sl1de"><img src="static/img/bees3.jpeg"></div>
+
+                            <div class="sl1de"><img src="static/img/bees1.jpeg"></div>
+
+                        </div>
+            </div>
+
+
+
+            <div class="buttonContainer">
+                <div class="playPause">
+                    <input type="checkbox" value="None" id="playPause" name="check" checked>
+                    <label for="playPause" id="hit"></label>
+                </div>
+            </div>
+
+
+
+
+
+            <footer class="container-fluid">
+                <div class="row">
+                    <div class="wrap">
+                        <div class="col-md-12">
+                            <div class="text-center text-uppercase">
+
+                            </div>
+                            <div class="col-md-12 foot">
+                                <img src='/static/img/banner-1563543_640.jpg' width='50%' height='100'>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script type="text/javascript" src="/static/js/script.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+</body>
+
+</html>

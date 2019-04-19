@@ -1,13 +1,86 @@
 
+h1{
+    text-decoration: underline;
+}
+
+
+/*------------NAVABR*/
+.navbar-nav {
+    margin-left: 20px;
+    
+}
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 0;
+}
+
+@media (min-width: 768px) {
+.navbar-nav>li>a {
+  padding: 7;
+ }
+}
+ul li {
+    padding: 1px;
+}
+.nav>li {
+    position: relative;
+    display:inline-block;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: #ff3939;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #fbfbfb;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+.navbar-default {
+    background-color: #FD4D0C;
+    border-color: transparent;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    border-radius: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-default {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*------------NAVABR*/
 
 /* To Do List Stylings*/
+
 /* Style the input */
+
 input {
     margin: 10px;
     width: 25%;
     padding-left: 10px;
     font-size: 24px;
 }
+
 /* Style the "Add" button */
 
 .addBtn {
@@ -38,7 +111,7 @@ ul {
 ul li {
     cursor: pointer;
     position: relative;
-    padding: 12px 8px 12px 40px;
+    padding: 10px;
     list-style-type: none;
     background: #ffad33;
     font-size: 18px;
@@ -46,13 +119,9 @@ ul li {
     width: 25%;
 }
 
-ul li.checked {
-    background: #341509;
-    color: #fff;
-    text-decoration: line-through;
-}
 
 /* Style the close button */
+
 .close {
     position: absolute;
     right: 0;
@@ -66,14 +135,16 @@ ul li.checked {
 }
 
 /*PHP Stuff*/
+
 form {
-    padding: 5px 3%;
+    padding:55px 3%;
 }
 
-.poll {
+#poll {
+    padding:20px;
     font-size: 18px;
     color: black;
-    text-shadow: 1px 2px white;
+
 }
 
 table {
@@ -84,7 +155,6 @@ table {
 tr {
     font-size: 18px;
     color: black;
-    text-shadow: 1px 2px white;
 }
 
 td {
@@ -93,4 +163,120 @@ td {
 
 input {
     margin-top: 5px;
+}
+
+/*----------FOOTER-----*/
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    text-align: center;
+    height: 50px;
+}
+
+.foot {
+    vertical-align: middle;
+}
+
+
+footer li a {
+    color: #fff;
+    padding-top:10%;
+}
+
+/*----------FOOTER-----*/
+
+/*------Carousel Code--*/
+
+.slider {
+  width: 60%;
+  height: 275px;
+  overflow: hidden;
+  position: relative; 
+  margin: 0 auto; 
+  background-color: #1a1a1a;
+  border-radius: 10px;
+}
+
+.sl1de>img {
+  float: left; /*Images are placed side by side and the holder element is pushed along this line with JS to display the relevant image*/
+  width: 20%; /*100% divided by number of images%*/
+  height: 275px;
+  object-fit: contain; /*retain original img dimensions*/
+
+}
+
+.holder {
+  width: 500%; /*number of images * 100%*/
+}
+
+.previous, .next {
+  background-color: #f1f1f1;
+  color: black;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.previous {
+ left: 20px;
+}
+
+.next {
+	right: 20px;
+}
+
+.slider>a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.slider>a:hover {
+    background-color: #DAA520;
+    color: #1a1a1a;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+}
+
+label {
+    display: block;
+    box-sizing: border-box;
+    width: 0;
+    height: 37px;
+    border-color: transparent transparent transparent #DAA520;
+    cursor: pointer;
+    border-style: double;
+    border-width: 0px 0 0px 30px;
+    margin: 0 auto;
+  }
+
+#playPause {
+    position: absolute;
+    display: none;
+}
+
+#playPause:checked + label {
+      border-style: solid;
+      border-width: 18.5px 0 18.5px 30px;
+      box-shadow: none;
+}
+
+@media (min-width: 768px) {
+.navbar-collapse.collapse {
+    display:list-item ;
+    height: auto!important;
+    padding-bottom: 0;
+    overflow: visible!important;
+}
+    
 }
